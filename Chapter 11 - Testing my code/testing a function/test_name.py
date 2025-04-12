@@ -19,10 +19,19 @@ class NamesTestCase(unittest.TestCase):
 
     def test_first_last_name(self):
         formatted_name = get_formatted_name('janis', 'joplin')
+
         # "assert" methods verify that a result I received matches the result
         # I expected to receive.
         self.assertEqual(formatted_name, 'Janis Joplin')
 
+    def test_first_middle_last_name(self):
+        formatted_name = get_formatted_name('wolfgang', 'mozart', 'amadeus')
+        self.assertEqual(formatted_name, 'Wolfgang Amadeus Mozart')
+
 
 if __name__ == '__main__':
+    """ Many testing frameworks import my test files before running them.
+     When a file is imported, the interpreter executes the file as it's being
+     imported. In this case, this file is executed only if it's directly run. """
+
     unittest.main()

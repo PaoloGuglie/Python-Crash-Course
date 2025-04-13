@@ -7,6 +7,9 @@ def main() -> None:
 
     squares = [n ** 2 for n in range(1, 6)]
 
+    # Plot styling
+    plt.style.use('seaborn-v0_8')
+
     # The subplots() function can generate one or more plots in the same figure.
     # The variable "fig" represents the entire figure or collection of plots that
     # are generated.

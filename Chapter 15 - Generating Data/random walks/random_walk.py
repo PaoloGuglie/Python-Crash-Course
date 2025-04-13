@@ -3,7 +3,8 @@ from random import choice
 
 class RandomWalk:
 
-    def __init__(self, points=5000):
+    def __init__(self, points=50_000):
+
         self.points = points
 
         # All walks start at (0, 0)

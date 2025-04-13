@@ -8,19 +8,23 @@ def create_and_plot_random_walk() -> None:
     rw = RandomWalk()
     rw.walk()
 
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(14, 8))
 
     # scatter the points using a colormap to show the path
     ax.scatter(rw.x_values,
                rw.y_values,
-               s=3,
+               s=1,
                c=rw.x_values,
                cmap=plt.cm.Blues,
                edgecolors='none')
 
     # emphasize the first and last points
-    ax.scatter(0, 0, color='green', edgecolors='none', s=100)
-    ax.scatter(rw.x_values[-1], rw.y_values[-1], color='red', s=100)
+    ax.scatter(0, 0, color='green', edgecolors='none', s=150)
+    ax.scatter(rw.x_values[-1], rw.y_values[-1], color='red', s=150)
+
+    # Remove the axes
+    ax.get_xaxis().set_visible(False)
+    ax.get_yaxis().set_visible(False)
 
     plt.show()
 

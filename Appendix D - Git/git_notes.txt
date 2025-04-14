@@ -1,0 +1,17 @@
+I can tell Git to ignore any file or directory by creating a file called:
+        .gitignore
+For example, files with the extension .pyc are automatically generated from .py files,
+so I don't need Git to keep track of them. These files are stored in a directory
+called __pycache__. To tell GIt to ignore this directory, in my .gitignore file:
+        __pycache__/
+
+Git commands:
+    - git init
+    - git status
+    - git add
+    - git commit (flags "-m" to comment and "-a" to add tracked files to commit)
+    - git log
+    - git checkout
+
+In Git, a "branch" is a version of the porject I'm working on. If I created the
+project, I should be in the branch called "master".

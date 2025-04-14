@@ -9,10 +9,10 @@ Git commands:
     - git init
     - git status
     - git add
-    - git commit (flags "-m" to comment and "-a" to add tracked files to commit)
-    - git log
-    - git checkout
-    - git reset --hard
+    - git commit  (flags "-m" to comment and "-a" to add tracked files to commit)
+    - git log   (flag --pretty=oneline)
+    - git checkout   (flags "." , "master" and "first 6 ID digits")
+    - git reset --hard "first 6 ID digits"
     - rm -rf .git (to remove git)
 
 In Git, a "branch" is a version of the project I'm working on. If I created the
@@ -26,3 +26,8 @@ Remember that the "-a" flag tells Git to add all the already-tracked modified fi
 to the current commit. If I create new files, to track them, I need to use:
     git add .
 
+When I check out a previous commit, I leave the master branch and enter what Git
+refers to as a "detached  HEAD state". "HEAD" is the current committed state of
+the project; I'm "detached" beacuse I've left a named branch ("master", in this case).
+To get back to "master":
+    git checkout master

@@ -12,6 +12,17 @@ Git commands:
     - git commit (flags "-m" to comment and "-a" to add tracked files to commit)
     - git log
     - git checkout
+    - git reset --hard
+    - rm -rf .git (to remove git)
 
-In Git, a "branch" is a version of the porject I'm working on. If I created the
+In Git, a "branch" is a version of the project I'm working on. If I created the
 project, I should be in the branch called "master".
+
+A "commit" is a snapshot of the project at a particular point in time.
+
+I can combine flags:
+    git commit -am "Changed project"
+Remember that the "-a" flag tells Git to add all the already-tracked modified files
+to the current commit. If I create new files, to track them, I need to use:
+    git add .
+
